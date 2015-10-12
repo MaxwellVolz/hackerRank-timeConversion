@@ -17,6 +17,9 @@ var converter = function(t){
 		return time;
 	}	
 	else{
+		if(hours == '12'){
+			return time;
+		}
 		return (parseInt(hours) + 12) + noHours;
 	}
 	
