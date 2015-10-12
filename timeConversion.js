@@ -11,11 +11,13 @@ var converter = function(t){
 		noHours = t.slice(2,8);
 	
 	if(suffix == "AM"){
+		if(hours == '12'){
+			return ('00' + noHours);
+		}
 		return time;
 	}	
 	else{
 		return (parseInt(hours) + 12) + noHours;
-			
 	}
 	
 	//return suffix + time + "\n" + hours;
